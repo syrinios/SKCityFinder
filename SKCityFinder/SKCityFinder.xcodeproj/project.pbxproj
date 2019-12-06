@@ -19,7 +19,18 @@
 		81254E71239AE57A001CC758 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 81254E70239AE57A001CC758 /* cities.json */; };
 		81254E77239AEE2C001CC758 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81254E76239AEE2C001CC758 /* DetailsViewController.swift */; };
 		81254E79239AEE51001CC758 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81254E78239AEE51001CC758 /* DetailsPresenter.swift */; };
+		81254E81239AF26E001CC758 /* SKCityFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81254E80239AF26E001CC758 /* SKCityFinderTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		81254E83239AF26E001CC758 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81254E46239AD9F0001CC758 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81254E4D239AD9F0001CC758;
+			remoteInfo = SKCityFinder;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		81254E4E239AD9F0001CC758 /* SKCityFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKCityFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,10 +47,20 @@
 		81254E70239AE57A001CC758 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		81254E76239AEE2C001CC758 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		81254E78239AEE51001CC758 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		81254E7E239AF26E001CC758 /* SKCityFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKCityFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81254E80239AF26E001CC758 /* SKCityFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKCityFinderTests.swift; sourceTree = "<group>"; };
+		81254E82239AF26E001CC758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		81254E4B239AD9F0001CC758 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81254E7B239AF26E001CC758 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				81254E50239AD9F0001CC758 /* SKCityFinder */,
+				81254E7F239AF26E001CC758 /* SKCityFinderTests */,
 				81254E4F239AD9F0001CC758 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				81254E4E239AD9F0001CC758 /* SKCityFinder.app */,
+				81254E7E239AF26E001CC758 /* SKCityFinderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +148,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		81254E7F239AF26E001CC758 /* SKCityFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				81254E80239AF26E001CC758 /* SKCityFinderTests.swift */,
+				81254E82239AF26E001CC758 /* Info.plist */,
+			);
+			path = SKCityFinderTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +177,24 @@
 			productReference = 81254E4E239AD9F0001CC758 /* SKCityFinder.app */;
 			productType = "com.apple.product-type.application";
 		};
+		81254E7D239AF26E001CC758 /* SKCityFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81254E85239AF26E001CC758 /* Build configuration list for PBXNativeTarget "SKCityFinderTests" */;
+			buildPhases = (
+				81254E7A239AF26E001CC758 /* Sources */,
+				81254E7B239AF26E001CC758 /* Frameworks */,
+				81254E7C239AF26E001CC758 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81254E84239AF26E001CC758 /* PBXTargetDependency */,
+			);
+			name = SKCityFinderTests;
+			productName = SKCityFinderTests;
+			productReference = 81254E7E239AF26E001CC758 /* SKCityFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,6 +207,10 @@
 				TargetAttributes = {
 					81254E4D239AD9F0001CC758 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					81254E7D239AF26E001CC758 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 81254E4D239AD9F0001CC758;
 					};
 				};
 			};
@@ -174,6 +228,7 @@
 			projectRoot = "";
 			targets = (
 				81254E4D239AD9F0001CC758 /* SKCityFinder */,
+				81254E7D239AF26E001CC758 /* SKCityFinderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +242,13 @@
 				81254E5C239AD9F1001CC758 /* LaunchScreen.storyboard in Resources */,
 				81254E59239AD9F1001CC758 /* Assets.xcassets in Resources */,
 				81254E57239AD9F0001CC758 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81254E7C239AF26E001CC758 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +270,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		81254E7A239AF26E001CC758 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81254E81239AF26E001CC758 /* SKCityFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81254E84239AF26E001CC758 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81254E4D239AD9F0001CC758 /* SKCityFinder */;
+			targetProxy = 81254E83239AF26E001CC758 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		81254E55239AD9F0001CC758 /* Main.storyboard */ = {
@@ -382,6 +460,46 @@
 			};
 			name = Release;
 		};
+		81254E86239AF26E001CC758 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WW3726UVP6;
+				INFOPLIST_FILE = SKCityFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ios.assignment.SKCityFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKCityFinder.app/SKCityFinder";
+			};
+			name = Debug;
+		};
+		81254E87239AF26E001CC758 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WW3726UVP6;
+				INFOPLIST_FILE = SKCityFinderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ios.assignment.SKCityFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKCityFinder.app/SKCityFinder";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -399,6 +517,15 @@
 			buildConfigurations = (
 				81254E61239AD9F1001CC758 /* Debug */,
 				81254E62239AD9F1001CC758 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81254E85239AF26E001CC758 /* Build configuration list for PBXNativeTarget "SKCityFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81254E86239AF26E001CC758 /* Debug */,
+				81254E87239AF26E001CC758 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
