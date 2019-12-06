@@ -24,10 +24,11 @@ protocol CityCell: class {
 class CityPresenter {
     fileprivate let cityService: CityService
     weak fileprivate var cityView : CityView?
-    private var allCities = [CityViewData]()
-    
+    private var allCities = [CityViewData]() { didSet { citiesData = allCities } }
+    private var citiesData = [CityViewData]() { didSet { cityView?.reload() } }
+
     var cityCount: Int {
-        return allCities.count
+        return citiesData.count
     }
     
     init(cityService: CityService){
@@ -54,7 +55,15 @@ class CityPresenter {
     }
     
     func configure(cell: CityCell, row: Int) {
-        let city = allCities[row]
+        let city = citiesData[row]
         cell.show(city: city)
+    }
+    
+    func filterCities(with keyword: String) {
+        if keyword.isEmpty {
+            citiesData = allCities
+        } else {
+            citiesData = allCities.filter { $0.name.uppercased().hasPrefix(keyword.uppercased()) }
+        }
     }
 }

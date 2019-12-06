@@ -55,3 +55,21 @@ extension UITableViewCell: CityCell {
         detailTextLabel?.text = "Coordinate (\(city.coord.lat), \(city.coord.lon))"
     }
 }
+
+extension CitiesViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = nil
+        searchBar.showsCancelButton = false
+        searchBar.endEditing(true)
+        cityPresenter.filterCities(with: "")
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard let keyword = searchBar.text else { return }
+        cityPresenter.filterCities(with: keyword)
+    }
+}
