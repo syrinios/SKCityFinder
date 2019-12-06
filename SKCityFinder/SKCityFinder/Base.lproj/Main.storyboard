@@ -10,16 +10,29 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="zi4-Qt-DbB">
             <objects>
-                <viewController id="TB6-P5-Ob4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DKS-Ob-Laa">
+                <viewController storyboardIdentifier="DetailsViewController" id="TB6-P5-Ob4" customClass="DetailsViewController" customModule="SKCityFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DKS-Ob-Laa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IsU-t1-6vE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ZPF-Tj-a1b"/>
+                        <constraints>
+                            <constraint firstItem="IsU-t1-6vE" firstAttribute="leading" secondItem="DKS-Ob-Laa" secondAttribute="leading" id="B1h-ay-iGU"/>
+                            <constraint firstItem="IsU-t1-6vE" firstAttribute="top" secondItem="DKS-Ob-Laa" secondAttribute="top" id="Lry-Eh-Jxq"/>
+                            <constraint firstAttribute="bottom" secondItem="IsU-t1-6vE" secondAttribute="bottom" id="TLd-8D-wuz"/>
+                            <constraint firstAttribute="trailing" secondItem="IsU-t1-6vE" secondAttribute="trailing" id="x8G-mR-bZ5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="IsU-t1-6vE" id="Ngi-v2-fP0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSZ-w3-Yho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,13 +119,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JnY-Ar-KKz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6uZ-PJ-WMj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JnY-Ar-KKz" secondAttribute="bottom" id="C1y-5l-dgy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JnY-Ar-KKz" secondAttribute="trailing" id="W9i-hR-pxx"/>
+                            <constraint firstItem="JnY-Ar-KKz" firstAttribute="trailing" secondItem="jEF-gb-3mI" secondAttribute="trailing" id="JgT-ds-dOV"/>
                             <constraint firstItem="jEF-gb-3mI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WH4-jX-6I8"/>
                             <constraint firstItem="jEF-gb-3mI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bhc-PG-9xf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jEF-gb-3mI" secondAttribute="trailing" id="gWe-cw-Ch1"/>
                             <constraint firstItem="JnY-Ar-KKz" firstAttribute="top" secondItem="jEF-gb-3mI" secondAttribute="bottom" id="hPb-Ag-UM9"/>
+                            <constraint firstItem="JnY-Ar-KKz" firstAttribute="leading" secondItem="jEF-gb-3mI" secondAttribute="leading" id="kyM-RA-jS1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

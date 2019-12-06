@@ -15,6 +15,7 @@ struct CityViewData{
 
 protocol CityView: NSObjectProtocol {
     func reload()
+    func showDetails(with presenter: DetailsPresenter)
 }
 
 protocol CityCell: class {
@@ -65,5 +66,10 @@ class CityPresenter {
         } else {
             citiesData = allCities.filter { $0.name.uppercased().hasPrefix(keyword.uppercased()) }
         }
+    }
+    
+    func showDetails(row: Int) {
+        let detailsPresenter = DetailsPresenter(with: citiesData[row])
+        cityView?.showDetails(with: detailsPresenter)
     }
 }

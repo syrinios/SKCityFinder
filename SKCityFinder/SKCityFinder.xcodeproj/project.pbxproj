@@ -17,6 +17,8 @@
 		81254E6D239AE0A9001CC758 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81254E6C239AE0A9001CC758 /* City.swift */; };
 		81254E6F239AE20F001CC758 /* CityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81254E6E239AE20F001CC758 /* CityPresenter.swift */; };
 		81254E71239AE57A001CC758 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 81254E70239AE57A001CC758 /* cities.json */; };
+		81254E77239AEE2C001CC758 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81254E76239AEE2C001CC758 /* DetailsViewController.swift */; };
+		81254E79239AEE51001CC758 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81254E78239AEE51001CC758 /* DetailsPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		81254E6C239AE0A9001CC758 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		81254E6E239AE20F001CC758 /* CityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPresenter.swift; sourceTree = "<group>"; };
 		81254E70239AE57A001CC758 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
+		81254E76239AEE2C001CC758 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		81254E78239AEE51001CC758 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				81254E6E239AE20F001CC758 /* CityPresenter.swift */,
+				81254E78239AEE51001CC758 /* DetailsPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 			children = (
 				81254E68239ADBCE001CC758 /* MainSplitViewController.swift */,
 				81254E53239AD9F0001CC758 /* CitiesViewController.swift */,
+				81254E76239AEE2C001CC758 /* DetailsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,8 +201,10 @@
 				81254E6D239AE0A9001CC758 /* City.swift in Sources */,
 				81254E52239AD9F0001CC758 /* AppDelegate.swift in Sources */,
 				81254E6F239AE20F001CC758 /* CityPresenter.swift in Sources */,
+				81254E77239AEE2C001CC758 /* DetailsViewController.swift in Sources */,
 				81254E6B239AE092001CC758 /* CityService.swift in Sources */,
 				81254E69239ADBCE001CC758 /* MainSplitViewController.swift in Sources */,
+				81254E79239AEE51001CC758 /* DetailsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

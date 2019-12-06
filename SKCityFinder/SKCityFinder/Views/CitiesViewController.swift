@@ -41,11 +41,22 @@ extension CitiesViewController: UITableViewDataSource, UITableViewDelegate {
         cityPresenter.configure(cell: cell, row: indexPath.row)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cityPresenter.showDetails(row: indexPath.row)
+    }
 }
 
 extension CitiesViewController: CityView {
     func reload() {
         tableView.reloadData()
+    }
+    
+    func showDetails(with presenter: DetailsPresenter) {
+        if let split = self.splitViewController as? MainSplitViewController {
+            let detailViewController = DetailsViewController.init(with: presenter)
+            split.showDetailViewController(detailViewController, sender: nil)
+        }
     }
 }
 
