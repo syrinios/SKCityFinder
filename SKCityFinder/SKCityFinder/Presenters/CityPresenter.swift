@@ -16,6 +16,7 @@ struct CityViewData{
 protocol CityView: NSObjectProtocol {
     func reload()
     func showDetails(with presenter: DetailsPresenter)
+    func showAbout()
 }
 
 protocol CityCell: class {
@@ -71,5 +72,9 @@ class CityPresenter {
     func showDetails(row: Int) {
         let detailsPresenter = DetailsPresenter(with: citiesData[row])
         cityView?.showDetails(with: detailsPresenter)
+    }
+    
+    func showAbout() {
+        cityView?.showAbout()
     }
 }

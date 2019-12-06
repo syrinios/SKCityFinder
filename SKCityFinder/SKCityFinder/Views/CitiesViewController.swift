@@ -45,6 +45,10 @@ extension CitiesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         cityPresenter.showDetails(row: indexPath.row)
     }
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        cityPresenter.showAbout()
+    }
 }
 
 extension CitiesViewController: CityView {
@@ -58,12 +62,19 @@ extension CitiesViewController: CityView {
             split.showDetailViewController(detailViewController, sender: nil)
         }
     }
+    
+    func showAbout() {
+        let aboutViewController =  self.storyboard?.instantiateViewController(withIdentifier: "AboutViewController")
+            as! AboutViewController
+        navigationController?.present(aboutViewController, animated: true, completion: nil)
+    }
 }
 
 extension UITableViewCell: CityCell {
     func show(city: CityViewData) {
         textLabel?.text = "\(city.name)"
         detailTextLabel?.text = "Coordinate (\(city.coord.lat), \(city.coord.lon))"
+        accessoryType = .detailButton
     }
 }
 
