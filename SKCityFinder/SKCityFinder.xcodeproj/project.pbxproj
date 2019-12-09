@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81140BED239DE409005CA0B3 /* SKCityFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81140BEC239DE409005CA0B3 /* SKCityFinderUITests.swift */; };
 		81254E52239AD9F0001CC758 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81254E51239AD9F0001CC758 /* AppDelegate.swift */; };
 		81254E54239AD9F0001CC758 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81254E53239AD9F0001CC758 /* CitiesViewController.swift */; };
 		81254E57239AD9F0001CC758 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81254E55239AD9F0001CC758 /* Main.storyboard */; };
@@ -29,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		81140BEF239DE409005CA0B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 81254E46239AD9F0001CC758 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81254E4D239AD9F0001CC758;
+			remoteInfo = SKCityFinder;
+		};
 		81254E83239AF26E001CC758 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 81254E46239AD9F0001CC758 /* Project object */;
@@ -39,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81140BEA239DE409005CA0B3 /* SKCityFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKCityFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81140BEC239DE409005CA0B3 /* SKCityFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKCityFinderUITests.swift; sourceTree = "<group>"; };
+		81140BEE239DE409005CA0B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81254E4E239AD9F0001CC758 /* SKCityFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKCityFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81254E51239AD9F0001CC758 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81254E53239AD9F0001CC758 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		81140BE7239DE409005CA0B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81254E4B239AD9F0001CC758 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,11 +100,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81140BEB239DE409005CA0B3 /* SKCityFinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				81140BEC239DE409005CA0B3 /* SKCityFinderUITests.swift */,
+				81140BEE239DE409005CA0B3 /* Info.plist */,
+			);
+			path = SKCityFinderUITests;
+			sourceTree = "<group>";
+		};
 		81254E45239AD9F0001CC758 = {
 			isa = PBXGroup;
 			children = (
 				81254E50239AD9F0001CC758 /* SKCityFinder */,
 				81254E7F239AF26E001CC758 /* SKCityFinderTests */,
+				81140BEB239DE409005CA0B3 /* SKCityFinderUITests */,
 				81254E4F239AD9F0001CC758 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +124,7 @@
 			children = (
 				81254E4E239AD9F0001CC758 /* SKCityFinder.app */,
 				81254E7E239AF26E001CC758 /* SKCityFinderTests.xctest */,
+				81140BEA239DE409005CA0B3 /* SKCityFinderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +207,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		81140BE9239DE409005CA0B3 /* SKCityFinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81140BF1239DE409005CA0B3 /* Build configuration list for PBXNativeTarget "SKCityFinderUITests" */;
+			buildPhases = (
+				81140BE6239DE409005CA0B3 /* Sources */,
+				81140BE7239DE409005CA0B3 /* Frameworks */,
+				81140BE8239DE409005CA0B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81140BF0239DE409005CA0B3 /* PBXTargetDependency */,
+			);
+			name = SKCityFinderUITests;
+			productName = SKCityFinderUITests;
+			productReference = 81140BEA239DE409005CA0B3 /* SKCityFinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		81254E4D239AD9F0001CC758 /* SKCityFinder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81254E60239AD9F1001CC758 /* Build configuration list for PBXNativeTarget "SKCityFinder" */;
@@ -219,10 +266,14 @@
 		81254E46239AD9F0001CC758 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Syrine Ferjani";
 				TargetAttributes = {
+					81140BE9239DE409005CA0B3 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 81254E4D239AD9F0001CC758;
+					};
 					81254E4D239AD9F0001CC758 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -247,11 +298,19 @@
 			targets = (
 				81254E4D239AD9F0001CC758 /* SKCityFinder */,
 				81254E7D239AF26E001CC758 /* SKCityFinderTests */,
+				81140BE9239DE409005CA0B3 /* SKCityFinderUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		81140BE8239DE409005CA0B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81254E4C239AD9F0001CC758 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +333,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		81140BE6239DE409005CA0B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81140BED239DE409005CA0B3 /* SKCityFinderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81254E4A239AD9F0001CC758 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,6 +372,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		81140BF0239DE409005CA0B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 81254E4D239AD9F0001CC758 /* SKCityFinder */;
+			targetProxy = 81140BEF239DE409005CA0B3 /* PBXContainerItemProxy */;
+		};
 		81254E84239AF26E001CC758 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 81254E4D239AD9F0001CC758 /* SKCityFinder */;
@@ -332,6 +404,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		81140BF2239DE409005CA0B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WW3726UVP6;
+				INFOPLIST_FILE = SKCityFinderUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ios.assignment.SKCityFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SKCityFinder;
+			};
+			name = Debug;
+		};
+		81140BF3239DE409005CA0B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WW3726UVP6;
+				INFOPLIST_FILE = SKCityFinderUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ios.assignment.SKCityFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SKCityFinder;
+			};
+			name = Release;
+		};
 		81254E5E239AD9F1001CC758 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -527,6 +639,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		81140BF1239DE409005CA0B3 /* Build configuration list for PBXNativeTarget "SKCityFinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81140BF2239DE409005CA0B3 /* Debug */,
+				81140BF3239DE409005CA0B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		81254E49239AD9F0001CC758 /* Build configuration list for PBXProject "SKCityFinder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

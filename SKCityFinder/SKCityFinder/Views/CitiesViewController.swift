@@ -25,7 +25,9 @@ class CitiesViewController: UIViewController {
 
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
-        
+        tableView.isAccessibilityElement = true
+        tableView.accessibilityIdentifier = "table"
+
         cityPresenter.attachView(self)
         cityPresenter.getCities()
     }
@@ -39,6 +41,7 @@ extension CitiesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cityPresenter.configure(cell: cell, row: indexPath.row)
+        cell.accessibilityIdentifier = "cell\(indexPath.row + 1)"
         return cell
     }
     
@@ -75,6 +78,7 @@ extension UITableViewCell: CityCell {
         textLabel?.text = "\(city.name)"
         detailTextLabel?.text = "Coordinate (\(city.coord.lat), \(city.coord.lon))"
         accessoryType = .detailButton
+        accessoryView?.isAccessibilityElement = true
     }
 }
 
