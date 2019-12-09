@@ -8,11 +8,6 @@
 
 import Foundation
 
-struct CityViewData{
-    let name: String
-    let coord: Coord
-}
-
 protocol CityView: NSObjectProtocol {
     func reload()
     func showDetails(with presenter: DetailsPresenter)
