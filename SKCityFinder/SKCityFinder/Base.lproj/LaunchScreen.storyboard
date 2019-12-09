@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -10,11 +11,30 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashscreen" translatesAutoresizingMaskIntoConstraints="NO" id="XOY-5i-HKH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_cityfinder" translatesAutoresizingMaskIntoConstraints="NO" id="OND-hn-eEU">
+                                <rect key="frame" x="75" y="346" width="225" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OND-hn-eEU" secondAttribute="height" multiplier="15:8" id="sEP-Xx-F5e"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="OND-hn-eEU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1SF-m6-gjl"/>
+                            <constraint firstItem="XOY-5i-HKH" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="7m5-LT-VDv"/>
+                            <constraint firstItem="XOY-5i-HKH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="KcP-8u-N2z"/>
+                            <constraint firstAttribute="trailing" secondItem="XOY-5i-HKH" secondAttribute="trailing" id="TRL-Ic-eRK"/>
+                            <constraint firstItem="OND-hn-eEU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ZBa-N0-J1a"/>
+                            <constraint firstAttribute="bottom" secondItem="XOY-5i-HKH" secondAttribute="bottom" id="kyg-mV-Wh0"/>
+                            <constraint firstItem="OND-hn-eEU" firstAttribute="width" secondItem="XOY-5i-HKH" secondAttribute="width" multiplier="0.6" id="z8p-7m-n4S"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -22,4 +42,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo_cityfinder" width="253.33332824707031" height="47.666667938232422"/>
+        <image name="splashscreen" width="414" height="896"/>
+    </resources>
 </document>
