@@ -27,6 +27,7 @@ class CitiesViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.isAccessibilityElement = true
         tableView.accessibilityIdentifier = "table"
+        tableView.keyboardDismissMode = .onDrag
 
         cityPresenter.attachView(self)
         cityPresenter.getCities()
@@ -46,6 +47,9 @@ extension CitiesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if searchBar.isFirstResponder {
+            view.endEditing(true)
+        }
         cityPresenter.showDetails(row: indexPath.row)
     }
     
